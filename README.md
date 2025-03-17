@@ -20,3 +20,21 @@
 -Https
 -Tree Shaking - remove unused code
 -Different dev and prod bundles
+
+# EatNow
+
+Header
+-Logo
+-NavItems
+Body
+-Search
+-Restaurant container
+-Restaurant Card
+-Img
+-Restaurant Name, Ratings, Cuisine and Delivery Timer
+
+Footer
+-Copyright
+-Links
+-Address
+-Contact
