@@ -26,6 +26,7 @@
 Header
 -Logo
 -NavItems
+
 Body
 -Search
 -Restaurant container
