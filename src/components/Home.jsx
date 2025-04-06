@@ -1,4 +1,4 @@
-import RestaurantCard from "./RestaurantCard";
+import RestaurantCard, { withPromotedLabel } from "./RestaurantCard";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
@@ -9,6 +9,7 @@ const Home = () => {
   const [filteredRestaurants, setFilteredRestaurants]=useState([]);
   const [searchText, setSearchText]=useState('');
   const onlineStatus=useOnlineStatus();
+  const RestaurantCardPromoted=withPromotedLabel(RestaurantCard)
 
   useEffect(()=>{
     fetchData();
@@ -47,14 +48,14 @@ const Home = () => {
         </div>
         <div className="search m-4 p-4 flex items-center">
           <button className="px-4 py-2 bg-gray-100 rounded-lg cursor-pointer" onClick={()=>{
-            setListOfRestaurants(listOfRestaurants.filter(restaurant => restaurant.info.avgRating>4))
+            setFilteredRestaurants(filteredRestaurants.filter(restaurant => restaurant.info.avgRating>4))
           }}>Top Rated Restaurants</button>
         </div>
       </div>
       <div className="flex flex-wrap">
         {filteredRestaurants.map((restaurant) => (
           <Link to={"/restaurant/" + restaurant.info.id} key={restaurant.info.id}>
-            <RestaurantCard resData={restaurant} />
+            { restaurant.info?.promoted ? <RestaurantCardPromoted  resData={restaurant}/>: <RestaurantCard resData={restaurant} />}
           </Link>
         ))}
       </div>
