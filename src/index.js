@@ -5,6 +5,7 @@ import AppLayout from "./App";
 import Home from "./components/Home";
 import Contact from "./components/Contact";
 import RestaurantMenu from "./components/RestaurantMenu";
+import Cart from "./components/Cart";
 import Error from "./components/Error";
 
 const About = lazy(() => import("./components/About"));
@@ -33,6 +34,10 @@ const appRouter = createBrowserRouter([
       {
         path: "/restaurant/:resId",
         element: <RestaurantMenu />,
+      },
+      {
+        path: "/cart",
+        element: <Cart />,
       },
     ],
     errorElement: <Error />,
