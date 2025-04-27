@@ -5,7 +5,8 @@
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html",
-    "test": "jest"
+    "test": "jest",
+    "watch-test": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -19,9 +20,17 @@
   },
   "homepage": "https://github.com/Eswar-2848/Namaste-React#readme",
   "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
     "@parcel/transformer-html": "^2.14.4",
     "@parcel/transformer-react-refresh-wrap": "^2.14.4",
-    "parcel": "^2.13.3",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "parcel": "^2.14.4",
     "process": "^0.11.10"
   },
   "dependencies": {

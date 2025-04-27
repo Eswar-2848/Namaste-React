@@ -8,7 +8,7 @@ const RestaurantMenu = () => {
   const [showIndex, setShowIndex] = useState(0);
   const [itemsOpen, setItemsOpen] = useState(true);
   const { resId } = useParams();
-  const err = useRouteError();
+  // const err = useRouteError();
 
   const resInfo = useRestaurantMenu(resId);
 
