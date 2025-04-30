@@ -12,9 +12,17 @@ const Header = () => {
   //Subscribing to the store using a Selector
   const cartItems = useSelector((store) => store.cart.items);
   return (
-    <div className="flex justify-between bg-pink-100 shadow-lg">
-      <div className="w-38">
-        <img alt="app logo" className="logo" src={LOGO_URL} />
+    <div
+      className="flex justify-between bg-pink-100 shadow-lg w-full"
+      style={{ position: "fixed", height: "25vh", top: 0, left: 0 }}
+    >
+      <div className="w-35">
+        <img
+          alt="app logo"
+          className="logo"
+          src={LOGO_URL}
+          style={{ height: "100%" }}
+        />
       </div>
       <div className="flex items-center">
         <ul className="flex p-4 m-4">
