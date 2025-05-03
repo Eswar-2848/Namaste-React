@@ -33,9 +33,3 @@ Body
 -Restaurant Card
 -Img
 -Restaurant Name, Ratings, Cuisine and Delivery Timer
-
-Footer
--Copyright
--Links
--Address
--Contact
